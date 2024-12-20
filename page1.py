@@ -15,22 +15,23 @@ class DigitButton(CalcButton):
         CalcButton.__init__(self, text, button_clicked, expand) 
         self.style = ft.ButtonStyle(
             color={
-                    ft.MaterialState.HOVERED: ft.colors.GREEN,                   
-                    ft.MaterialState.DEFAULT: ft.colors.BLACK,
-                },
-                bgcolor={ft.MaterialState.FOCUSED: ft.colors.WHITE, "": ft.colors.WHITE},
-                padding={ft.MaterialState.HOVERED: 10},
-                overlay_color=ft.colors.TRANSPARENT,
-                elevation={"pressed": 0, "": 1},
-                animation_duration=400,
-                side={
-                    ft.MaterialState.DEFAULT: BorderSide(1, ft.colors.YELLOW),
-                    ft.MaterialState.HOVERED: BorderSide(2, ft.colors.YELLOW),
-                },
-                shape={
-                    ft.MaterialState.HOVERED: RoundedRectangleBorder(radius=10),
-                    ft.MaterialState.DEFAULT: RoundedRectangleBorder(radius=2),
-                }
+                ft.ControlState.HOVERED: ft.colors.GREEN,
+                ft.ControlState.FOCUSED: ft.colors.BLUE,
+                ft.ControlState.DEFAULT: ft.colors.BLACK                
+            },
+            bgcolor={ft.MaterialState.FOCUSED: ft.colors.WHITE, "": ft.colors.WHITE},
+            padding={ft.MaterialState.HOVERED: 20},
+            overlay_color=ft.colors.TRANSPARENT,
+            elevation={"pressed": 0, "": 1},
+            animation_duration=500,
+            side={
+                ft.MaterialState.DEFAULT: BorderSide(1, ft.colors.YELLOW),
+                ft.MaterialState.HOVERED: BorderSide(2, ft.colors.YELLOW),
+            },
+            shape={
+                ft.MaterialState.HOVERED: RoundedRectangleBorder(radius=20),
+                ft.MaterialState.DEFAULT: RoundedRectangleBorder(radius=2)
+            }
         )         
 class ActionButton(CalcButton):
     def __init__(self, text, button_clicked, expand=1):
