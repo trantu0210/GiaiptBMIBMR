@@ -14,45 +14,19 @@ class DigitButton(CalcButton):
     def __init__(self, text, button_clicked, expand=1):
         CalcButton.__init__(self, text, button_clicked, expand)     
         self.style = ft.ButtonStyle(
-            color={
-                    ft.MaterialState.HOVERED: ft.colors.GREEN,                   
-                    ft.MaterialState.DEFAULT: ft.colors.BLACK,
-                },
-                bgcolor={ft.MaterialState.FOCUSED: ft.colors.WHITE, "": ft.colors.WHITE},
-                padding={ft.MaterialState.HOVERED: 10},
-                overlay_color=ft.colors.TRANSPARENT,
-                elevation={"pressed": 0, "": 1},
-                animation_duration=400,
-                side={
-                    ft.MaterialState.DEFAULT: BorderSide(1, ft.colors.YELLOW),
-                    ft.MaterialState.HOVERED: BorderSide(2, ft.colors.YELLOW),
-                },
-                shape={
-                    ft.MaterialState.HOVERED: RoundedRectangleBorder(radius=10),
-                    ft.MaterialState.DEFAULT: RoundedRectangleBorder(radius=2),
-                }
+            color=ft.colors.BLACK,
+            bgcolor= ft.colors.WHITE,           
+            side=ft.BorderSide(2, color=ft.colors.GREEN),
+            shape=ft.RoundedRectangleBorder(radius=0)             
         )                    
 class ActionButton(CalcButton):
     def __init__(self, text, button_clicked, expand=1):
         CalcButton.__init__(self, text, button_clicked)      
         self.style = ft.ButtonStyle(
-            color={
-                    ft.MaterialState.HOVERED: "#FF7335" ,                   
-                    ft.MaterialState.DEFAULT: "#FF7335" ,
-                },
-                bgcolor={ft.MaterialState.FOCUSED: ft.colors.WHITE, "": ft.colors.WHITE},
-                padding={ft.MaterialState.HOVERED: 10},
-                overlay_color=ft.colors.TRANSPARENT,
-                elevation={"pressed": 0, "": 1},
-                animation_duration=400,
-                side={
-                    ft.MaterialState.DEFAULT: BorderSide(1, ft.colors.YELLOW),
-                    ft.MaterialState.HOVERED: BorderSide(2, ft.colors.YELLOW),
-                },
-                shape={
-                    ft.MaterialState.HOVERED: RoundedRectangleBorder(radius=10),
-                    ft.MaterialState.DEFAULT: RoundedRectangleBorder(radius=2),
-                }
+            color= "#FF7335",            
+            bgcolor= ft.colors.WHITE,          
+            side=ft.BorderSide(2, color=ft.colors.GREEN),
+            shape=ft.RoundedRectangleBorder(radius=0)    
         )                  
 class CalculatorApp3(ft.Container):    
     def __init__(self):
