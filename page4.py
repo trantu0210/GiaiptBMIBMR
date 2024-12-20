@@ -13,17 +13,25 @@ class CalcButton(ft.ElevatedButton):
         self.text = text
         self.expand = expand
         self.on_click = button_clicked
-        self.data = text
-        self.style = ft.ButtonStyle(shape=ft.RoundedRectangleBorder(radius=0))       
-        self.bgcolor = ft.colors.WHITE               
+        self.data = text                    
 class DigitButton(CalcButton):
     def __init__(self, text, button_clicked, expand=1):
         CalcButton.__init__(self, text, button_clicked, expand)     
-        self.color = ft.colors.BLACK            
+        self.style = ft.ButtonStyle(
+            color=ft.colors.BLACK,
+            bgcolor= ft.colors.WHITE,           
+            side=ft.BorderSide(1, color=ft.colors.YELLOW),
+            shape=ft.RoundedRectangleBorder(radius=0)            
+        )                
 class ActionButton(CalcButton):
     def __init__(self, text, button_clicked, expand=1):
         CalcButton.__init__(self, text, button_clicked)      
-        self.color = "#FF7335"              
+        self.style = ft.ButtonStyle(
+            color= "#FF7335",            
+            bgcolor= ft.colors.WHITE,          
+            side=ft.BorderSide(1, color=ft.colors.YELLOW),
+            shape=ft.RoundedRectangleBorder(radius=0)  
+        )                
 class CalculatorApp4(ft.Container):    
     def __init__(self):
         super().__init__()
