@@ -45,7 +45,7 @@ class ActionButton(CalcButton):
                     ft.MaterialState.DEFAULT: "#FF7335" ,
                 },
                 bgcolor={ft.MaterialState.FOCUSED: ft.colors.WHITE, "": ft.colors.WHITE},
-                padding={ft.MaterialState.HOVERED: 10},
+                padding={ft.MaterialState.HOVERED: 20},
                 overlay_color=ft.colors.TRANSPARENT,
                 elevation={"pressed": 0, "": 1},
                 animation_duration=400,
@@ -54,7 +54,7 @@ class ActionButton(CalcButton):
                     ft.MaterialState.HOVERED: BorderSide(2, ft.colors.YELLOW),
                 },
                 shape={
-                    ft.MaterialState.HOVERED: RoundedRectangleBorder(radius=10),
+                    ft.MaterialState.HOVERED: RoundedRectangleBorder(radius=20),
                     ft.MaterialState.DEFAULT: RoundedRectangleBorder(radius=2),
                 },
         )                
